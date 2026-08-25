@@ -1,3 +1,5 @@
+Live Damo : https://pharmacy-scv7.vercel.app/
+
 # Pharmacy Management & Wholesale Distribution System
 
 A complete web-based system for managing pharmacy inventory, sales, purchases, distribution, payments, expenses, and comprehensive reporting.
