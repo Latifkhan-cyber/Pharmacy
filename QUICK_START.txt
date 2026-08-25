@@ -1,0 +1,108 @@
+╔══════════════════════════════════════════════════════════════╗
+║    PHARMACY MANAGEMENT SYSTEM - QUICK START GUIDE           ║
+╚══════════════════════════════════════════════════════════════╝
+
+🚀 EASY SETUP (3 STEPS):
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 1: Create Database
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Open PostgreSQL (pgAdmin or command line) and run:
+
+    CREATE DATABASE pharmacy_db;
+
+If using psql command line:
+    psql -U postgres
+    CREATE DATABASE pharmacy_db;
+    \q
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 2: Configure Database Connection
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Edit the .env file and update your PostgreSQL password:
+
+    DATABASE_URL="postgresql://postgres:YOUR_PASSWORD@localhost:5432/pharmacy_db"
+
+Replace YOUR_PASSWORD with your actual PostgreSQL password
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 3: Run Setup
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Option A - Automatic (Windows):
+    Double-click: setup.bat
+
+Option B - Manual:
+    Open Command Prompt in this folder and run:
+    
+    npm install
+    npx prisma generate
+    npx prisma db push
+    npx prisma db seed
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎉 READY TO USE!
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Start the server:
+    npm run dev
+
+Open browser:
+    http://localhost:3000
+
+Login with:
+    Username: admin
+    Password: admin123
+
+⚠️  IMPORTANT: Change password after first login!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📚 DOCUMENTATION:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- README.md              → Full setup guide
+- API_DOCUMENTATION.md   → API reference (80+ endpoints)
+- PROJECT_SUMMARY.md     → Feature overview
+- SETUP_GUIDE.md         → Detailed troubleshooting
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔧 TROUBLESHOOTING:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Problem: npm install fails
+Solution: Run Command Prompt as Administrator
+
+Problem: Database connection error
+Solution: 
+  1. Check PostgreSQL is running
+  2. Verify password in .env file
+  3. Ensure database 'pharmacy_db' exists
+
+Problem: Port 3000 already in use
+Solution: npm run dev -- --port 3001
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✨ FEATURES:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✓ Medicine & Inventory Management
+✓ Sales & POS System
+✓ Purchase Management
+✓ Customer & Supplier Tracking
+✓ Payment & Expense Management
+✓ Comprehensive Reports
+✓ Profit & Loss Analysis
+✓ Distributor Management
+✓ Stock Alerts & Expiry Tracking
+✓ Batch-wise Inventory
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Need help? Check SETUP_GUIDE.md for detailed instructions!
+
+Built with ❤️ using Next.js, TypeScript, and PostgreSQL
